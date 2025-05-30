@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfólio de Kaue</title>
+  <style>
+    /* Reset and base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+    .container {
+      background: rgba(0,0,0,0.7);
+      max-width: 900px;
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+      overflow: hidden;
+    }
+    header {
+      background-color: #5a4da7;
+      padding: 30px;
+      text-align: center;
+      border-bottom: 3px solid #9678d3;
+    }
+    header h1 {
+      font-size: 3rem;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #d1c4e9;
+      font-style: italic;
+    }
+    main {
+      padding: 30px 40px;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #9678d3;
+      padding-bottom: 6px;
+    }
+    p {
+      line-height: 1.6;
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+    ul.skills-list {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    ul.skills-list li {
+      background: #9678d3;
+      padding: 10px 18px;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #201e2b;
+      box-shadow: 0 3px 8px rgba(150, 120, 211, 0.4);
+      transition: background-color 0.3s ease;
+      cursor: default;
+    }
+    ul.skills-list li:hover {
+      background: #bb9df7;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 24px;
+    }
+    .project-card {
+      background: #5a4da7;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.45);
+    }
+    .project-card h3 {
+      margin-bottom: 12px;
+      font-size: 1.3rem;
+    }
+    .project-card p {
+      flex-grow: 1;
+      color: #e0dffb;
+      font-size: 1rem;
+      margin-bottom: 16px;
+    }
+    .project-card a {
+      text-decoration: none;
+      color: #201e2b;
+      background: #bb9df7;
+      padding: 10px;
+      border-radius: 30px;
+      font-weight: 700;
+      text-align: center;
+      transition: background-color 0.3s ease;
+    }
+    .project-card a:hover {
+      background: #d4c3ff;
+    }
+    footer {
+      background-color: #4a3f8a;
+      text-align: center;
+      padding: 20px;
+      margin-top: -20px;
+    }
+    .contact-links {
+      margin-top: 12px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+    .contact-links a {
+      color: #bb9df7;
+      font-size: 1.6rem;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .contact-links a:hover {
+      color: #d4c3ff;
+    }
+    /* Responsive */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      main {
+        padding: 20px 16px;
+      }
+      .projects {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container" role="main">
+    <header>
+      <h1>Kaue</h1>
+      <p>Desenvolvedor Front-end &amp; Criador de Soluções</p>
+    </header>
+    <main>
+      <section aria-labelledby="about-title">
+        <h2 id="about-title">Sobre Mim</h2>
+        <p>
+          Olá! Meu nome é Kaue, sou um programador apaixonado por criar interfaces intuitivas e funcionais. Tenho experiência em desenvolvimento front-end e busco sempre aprender novas tecnologias para entregar os melhores resultados.
+        </p>
+      </section>
+      <section aria-labelledby="skills-title">
+        <h2 id="skills-title">Habilidades</h2>
+        <ul class="skills-list">
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>JavaScript</li>
+          <li>React</li>
+          <li>Git</li>
+          <li>Node.js</li>
+          <li>TypeScript</li>
+          <li>Responsive Design</li>
+        </ul>
+      </section>
+      <section aria-labelledby="projects-title">
+        <h2 id="projects-title">Projetos</h2>
+        <div class="projects">
+          <article class="project-card" aria-label="Projeto Portfolio Pessoal">
+            <h3>Portfolio Pessoal</h3>
+            <p>Um website estiloso e responsivo para mostrar meus projetos, habilidades e contato.</p>
+            <a href="#" target="_blank" rel="noopener noreferrer">Ver Projeto</a>
+          </article>
+          <article class="project-card" aria-label="Projeto Tarefas">
+            <h3>App de Tarefas</h3>
+            <p>Aplicativo para gerenciar tarefas diárias com funcionalidades de adicionar, editar e excluir.</p>
+            <a href="#" target="_blank" rel="noopener noreferrer">Ver Projeto</a>
+          </article>
+          <article class="project-card" aria-label="Projeto Blog">
+            <h3>Blog de Tecnologia</h3>
+            <p>Blog moderno para compartilhar artigos e novidades do mundo da tecnologia.</p>
+            <a href="#" target="_blank" rel="noopener noreferrer">Ver Projeto</a>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>Contato</p>
+      <div class="contact-links" role="navigation" aria-label="Redes Sociais de Kaue">
+        <a href="mailto:kaue@example.com" title="Enviar email para Kaue" aria-label="Email Kaue">&#9993;</a>
+        <a href="https://github.com/kaue" target="_blank" rel="noopener noreferrer" aria-label="GitHub Kaue">GitHub</a>
+        <a href="https://linkedin.com/in/kaue" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Kaue">LinkedIn</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
+
